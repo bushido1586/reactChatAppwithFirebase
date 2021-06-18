@@ -1,8 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import Container from './components/container';
+import EmailAdderComponent from './components/addName';
+import React from 'react';
 
 function App() {
-  const [name, setName] = react.useState()
+  const [name, setName] = React.useState()
   return (
     <div className="App">
       {!name && <EmailAdderComponent setName={setName} />}
