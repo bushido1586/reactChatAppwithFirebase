@@ -1,4 +1,5 @@
 import React from 'react';
+//import { db } from '../config/firebase';
 import style from 'styled-components';
 import Messages from './message';
 
@@ -36,6 +37,7 @@ export default function Container() {
             padding: 52px;
         }
         `
+        
         return(
             <Box>
                 <div className="chatBox">

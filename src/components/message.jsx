@@ -1,6 +1,9 @@
 import React from 'react';
+//import { db } from '../config/firebase';
 import style from 'styled-components';
 import Message from './messageBox';
+
+
 
 export default function Messages(){
 
@@ -36,6 +39,8 @@ export default function Messages(){
             sender: 1,
         }
     ]
+
+    
     return (
         <Messages>{messages.map((data)=>{
             return <Message data={data} />
