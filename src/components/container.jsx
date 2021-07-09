@@ -37,16 +37,28 @@ export default function Container() {
            border: 0;
            height: 52px;
        }
- 
    `
+    const input = React.createRef('');
+
    return (
        <Box>
          <div className="chatBox">
-         <Messages/>
+         <Messages />
              <div className="textFooter">
-                 <input type="text" />
+                 <input type="text" 
+                 id="input"
+                 onChange={(e) => {
+                     input.current = `${e.target.value}`
+                 }}
+                 />
                  <AnimationWrapper>
-                 <button>Send</button>
+                 <button onClick={async (e) => {
+                     if(input.current.length===0){
+                         return 
+                     };
+                     document.getElementById('input').value='';
+                 }} type="submit">
+                 Send</button>
                  </AnimationWrapper>
              </div>
          </div>
