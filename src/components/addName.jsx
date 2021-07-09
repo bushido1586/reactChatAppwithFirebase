@@ -5,7 +5,7 @@ export default function EmailAdderComponent( {setName} ){
     const input = React.createRef('');
     const EmailAdder = style.div`
     
-    width: -webkit-fill-available;
+    width: 100%;
     height: 100vh;
     position: absolute;
     z-index: 2;
